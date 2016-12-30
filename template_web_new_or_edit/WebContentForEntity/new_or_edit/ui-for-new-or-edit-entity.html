@@ -66,12 +66,12 @@
 #elseif ($tableColumn.getWidgetType() == "dropdown")
 					<input type="hidden" class="form-control" ng-model="entry.${tableColumn.getName()}" required="required">
 					<div>
-						<select ng-model="entry.${tableColumn.getName()}" ng-options="option.item_id as option.item_name for option in items" ng-disabled="operation == 'show'" required="required"></select>	
+						<select class="form-control" ng-model="entry.${tableColumn.getName()}" ng-options="option.item_id as option.item_name for option in items" ng-disabled="operation == 'show'" required="required"></select>	
 					</div>
 #elseif ($tableColumn.getWidgetType() == "list")
 					<input type="hidden" class="form-control" ng-model="entry.${tableColumn.getName()}" ng-readonly="operation == 'show'" required="required">
 					<div>
-						<select multiple="true" ng-model="entry.${tableColumn.getName()}" ng-options="option.item_id as option.item_name for option in items" ng-disabled="operation == 'show'" required="required"></select>	
+						<select class="form-control" multiple="true" ng-model="entry.${tableColumn.getName()}" ng-options="option.item_id as option.item_name for option in items" ng-disabled="operation == 'show'" required="required"></select>	
 					</div>
 #elseif ($tableColumn.getWidgetType() == "integer")
 					<input type="number" class="form-control" pattern="\d*" step="1"
